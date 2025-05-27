@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "server-info-api",
+	"version": "${version}",
+	"name": "Server Info API",
+	"description": "A simple server mod that setup an API endpoint for access server info through HTTP",
+	"authors": [
+		"Yoinky3000"
+	],
+	"contact": {
+		"homepage": "https://yoinky3000.xyz/",
+		"sources": "https://github.com/Yoinky3000/Server-Info-API"
+	},
+	"license": "MIT",
+	"icon": "assets/server-info-api/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.yoinky3000.server_info_api.ServerInfoAPI"
+		],
+		"client": [
+			"xyz.yoinky3000.server_info_api.ServerInfoAPIClient"
+		],
+		"fabric-datagen": [
+			"xyz.yoinky3000.server_info_api.ServerInfoAPIDataGenerator"
+		]
+	},
+	"mixins": [
+		"server-info-api.mixins.json",
+		{
+			"config": "server-info-api.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": ">=1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "xyz.yoinky3000.server_info_api.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
